@@ -8,6 +8,7 @@ import {
 
 import logoMastercraft from '../../assets/images/logo-mastercraft.svg'
 import iconBookMark from '../../assets/images/icon-bookmark.svg'
+import ProgressBar from '../../components/ProgressBar'
 
 const Home:React.FC = () => {
     return (
@@ -31,6 +32,8 @@ const Home:React.FC = () => {
                         </div>
                     </MasterCraftContent>
                 </section>    
+
+                <ProgressBar />
             </Content>
         </Container>
     )
