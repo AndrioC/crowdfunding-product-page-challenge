@@ -3,7 +3,8 @@ import Header from '../../components/Header'
 import { 
     Container,
     Content,
-    MasterCraftContent
+    MasterCraftContent,
+    ContributionInfo,
 } from './styles'
 
 import logoMastercraft from '../../assets/images/logo-mastercraft.svg'
@@ -33,7 +34,25 @@ const Home:React.FC = () => {
                     </MasterCraftContent>
                 </section>    
 
-                <ProgressBar />
+                <section>
+                    <ContributionInfo>
+                        <div className='wrapper-info'>
+                            <div className='wrapper-info-value'>
+                                <h1>$89,914</h1>
+                                <p>of $100,000 backed</p>
+                            </div>
+                            <div className='wrapper-info-value'>
+                                <h1>5,007</h1>
+                                <p>total backers</p>
+                            </div>
+                            <div className='wrapper-info-value'>
+                                <h1>56</h1>
+                                <p>days left</p>
+                            </div>
+                        </div>
+                        <ProgressBar />
+                    </ContributionInfo>  
+                </section>
             </Content>
         </Container>
     )

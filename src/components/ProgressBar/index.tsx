@@ -7,7 +7,7 @@ import {
 
 const ProgressBar:React.FC = () => {
 
-    const [percentageValue, setPercentageValue] = useState(90)
+    const [percentageValue, setPercentageValue] = useState(89.914)
 
     function limitValue(min: number, value: number, max: number){
         return Math.min(Math.max(min, value), max);

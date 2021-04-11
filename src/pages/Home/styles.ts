@@ -10,6 +10,14 @@ export const Container = styled.div`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+
+
+    section {
+        
+        & + section {
+            margin-top: 24px;
+        }
+    }
 `;
 
 export const MasterCraftContent = styled.div`
@@ -95,6 +103,61 @@ export const MasterCraftContent = styled.div`
 
             &:hover{
                 filter: brightness(0.81);
+            }
+        }
+    }
+
+`;
+
+export const ContributionInfo = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 730px;
+    height: 269px;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    background: var(--white);
+    border-radius: 9px;
+
+
+    .wrapper-info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 39px;
+        margin-left: 48px;
+
+
+        .wrapper-info-value{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            h1 {
+                font-size: 33px;
+                font-weight: bold;
+                line-height: 39px;
+            }
+
+            p {
+                margin-top: 9px;
+                font-size: 15px;
+                font-weight: 100;
+                color: var(--grey-100);   
+            }
+
+            & + div {
+                margin-left: 90px;
+                &::after{
+                    content: '';
+                    height: 63px;
+                    width: 1%;
+                    position: absolute;
+                    left: -50px;
+                    background: var(--grey-40);  
+                    opacity: .75;                        
+                }
             }
         }
     }
