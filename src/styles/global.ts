@@ -3,20 +3,14 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 
     :root {
-        --red-10: #ff8f70;
-        --red-50: #ff7a85;
-        --red-70: #ff525d;
-        --red-100: #ff3d54;
+        --background: #FAFAFA;
+        --white: #FFFFFF;
 
-        --blue-100: #3f4164;
-        --blue-300: #1f3f5b;
-        --blue-500: #2c2d3f;
-        --blue-900: #25252d;
+        --green-50: #3CB3AB;
+        --green-100: #147A73;
 
-        --white: #ffffff;
-
-        --gray-100: #c8c8cb;
-        --gray-300: #4b5862;
+        --grey-10: #F1F1F1;
+        --grey-100: #7A7A7A;
     }
 
     * {
@@ -30,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body, input, textarea, button {
-        font-family: 'Overpass', 'Ubuntu', sans-serif;
+        font-family: 'Commissioner', sans-serif;
     }
 
     h1, h2, h3, h4, h5, h6, strong {
