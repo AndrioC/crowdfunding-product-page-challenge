@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import Header from '../../components/Header'
 import { 
     Container,
@@ -13,7 +13,37 @@ import iconBookMark from '../../assets/images/icon-bookmark.svg'
 import ProgressBar from '../../components/ProgressBar'
 import BoxInfo from '../../components/BoxInfo'
 
+import featuresData from '../../assets/data/features'
+
+interface FeaturesData{
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    qtd: number;
+}
+
 const Home:React.FC = () => {
+
+    const [features, setFeatures] = useState<FeaturesData[]>([])
+
+    useMemo(() => {
+        setFeatures(featuresData)
+    }, [])
+
+    function renderFeatures(){
+        return (
+            features.map(item => (
+                <BoxInfo key={item.id}
+                    title={item.title}
+                    price={item.price}
+                    description={item.description}
+                    qtd={item.qtd}                                    
+                />    
+            ))
+        )
+    }
+
     return (
         <Container>
             <Header />
@@ -73,7 +103,7 @@ const Home:React.FC = () => {
                             </p>
                         </div>
 
-                        <BoxInfo />
+                        {renderFeatures()}
                     </AboutProjectInfo>
                 </section>
             </Content>

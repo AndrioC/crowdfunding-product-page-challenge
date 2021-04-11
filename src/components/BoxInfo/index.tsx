@@ -5,26 +5,30 @@ import {
     Wrapper
 } from './styles'
 
-const BoxInfo:React.FC = () => {
+interface Props{
+    title: string;
+    price: number;
+    description: string;
+    qtd: number;
+}
 
-    const qtd = 0
+const BoxInfo:React.FC<Props> = ({ title, price, description, qtd }) => {
 
     return (
         <Container>
             <Wrapper qtdValue={qtd}>
                 <div className='info-header'>
-                    <h1>Bamboo Stand</h1>
-                    <p>Pledge $25 or more</p>
+                    <h1>{title}</h1>
+                    <p>Pledge ${price} or more</p>
                 </div>
                 <div className='info-text'>
                     <p>
-                        You get an ergonomic stand made of natural bamboo. You've helped us launch <br />
-                        our promotional campaign, and you'll be added to a special Backer member list.
+                        {description}.
                     </p>
                 </div>
                 <div className='info-button'>
                     <p>{qtd} <span>left</span></p>
-                    <button type="button">Select Reward</button>
+                    <button type="button">{qtd > 0 ? 'Select Reward' : 'Out of stock'}</button>
                 </div>
             </Wrapper>
         </Container>

@@ -13,7 +13,7 @@ export const Container = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.0497193);
     background: var(--white);
     border-radius: 9px;
-    margin-bottom: 123px;
+    margin-bottom: 24px;
 `;
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -73,18 +73,19 @@ export const Wrapper = styled.div<WrapperProps>`
         }
 
         button {
+            cursor: ${props => props.qtdValue > 0 ? 'pointer' : 'not-allowed'};
             width: 157px;
             height: 48px;
             border-radius: 33px;
             border: 0;
-            background: var(--green-50);
+            background: ${props => props.qtdValue > 0 ? 'var(--green-50)' : 'var(--grey-100)'};
             color: var(--white);
             font-size: 15px;
             font-weight: bold;
             transition: background .3s;
 
             &:hover{
-                background: var(--green-100);
+                background: ${props => props.qtdValue > 0 ? 'var(--green-50)' : 'var(--grey-100)'};
             }
         }
     }
