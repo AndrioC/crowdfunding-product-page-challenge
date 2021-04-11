@@ -163,3 +163,34 @@ export const ContributionInfo = styled.div`
     }
 
 `;
+
+export const AboutProjectInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 730px;
+    height: 1197px;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    background: var(--white);
+    border-radius: 9px;
+    margin-bottom: 123px;
+
+    .project-info{
+        margin-left: -48px;     
+        margin-top: 48px;
+        margin-bottom: 30px;
+
+        h1 {
+            font-size: 21px;
+        }
+
+        p {
+            margin-top: 33px;
+            color: var(--grey-100);
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+`;

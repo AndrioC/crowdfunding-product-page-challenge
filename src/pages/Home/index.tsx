@@ -5,11 +5,13 @@ import {
     Content,
     MasterCraftContent,
     ContributionInfo,
+    AboutProjectInfo,
 } from './styles'
 
 import logoMastercraft from '../../assets/images/logo-mastercraft.svg'
 import iconBookMark from '../../assets/images/icon-bookmark.svg'
 import ProgressBar from '../../components/ProgressBar'
+import BoxInfo from '../../components/BoxInfo'
 
 const Home:React.FC = () => {
     return (
@@ -52,6 +54,27 @@ const Home:React.FC = () => {
                         </div>
                         <ProgressBar />
                     </ContributionInfo>  
+                </section>
+
+                <section>
+                    <AboutProjectInfo>
+                        <div className='project-info'>
+                            <h1>About this project</h1>
+                            <p>
+                                The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates <br />
+                                your screen to a more comfortable viewing height. Placing your monitor at eye level has <br />
+                                the potential to improve your posture and make you more comfortable white at work, <br />
+                                helping you stay focused on the task at hand.
+
+                                <br />
+                                <br />
+                                Featuring artisan craftsmanship, the simplicity of design creates extra desk space below <br />
+                                your computer to allow notepads, pens, and USB sticks to be stored under the stand.
+                            </p>
+                        </div>
+
+                        <BoxInfo />
+                    </AboutProjectInfo>
                 </section>
             </Content>
         </Container>
