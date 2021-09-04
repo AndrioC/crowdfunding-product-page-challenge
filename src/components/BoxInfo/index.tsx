@@ -10,6 +10,7 @@ interface Props{
     price: number;
     description: string;
     qtd: number;
+    
 }
 
 const BoxInfo:React.FC<Props> = ({ title, price, description, qtd }) => {

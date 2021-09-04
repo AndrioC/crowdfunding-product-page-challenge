@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { 
     Container,
     ProgressTracker
@@ -7,7 +7,7 @@ import {
 
 const ProgressBar:React.FC = () => {
 
-    const [percentageValue, setPercentageValue] = useState(89.914)
+    const percentageValue = 89.914;
 
     function limitValue(min: number, value: number, max: number){
         return Math.min(Math.max(min, value), max);

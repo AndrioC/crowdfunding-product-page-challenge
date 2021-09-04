@@ -15,6 +15,8 @@ import BoxInfo from '../../components/BoxInfo'
 
 import featuresData from '../../assets/data/features'
 
+import ModalBackThisProject from '../../components/ModalBackThisProject'
+
 interface FeaturesData{
     id: number;
     title: string;
@@ -26,6 +28,8 @@ interface FeaturesData{
 const Home:React.FC = () => {
 
     const [features, setFeatures] = useState<FeaturesData[]>([])
+
+    const [openModal, setOpenModal] = useState(false);
 
     useMemo(() => {
         setFeatures(featuresData)
@@ -57,7 +61,12 @@ const Home:React.FC = () => {
                             <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
                         </div>
                         <div className='mastercraft-buttons'>
-                            <button className='button-back-this-project'>Back this project</button>
+                            <button 
+                                className='button-back-this-project'
+                                onClick={() => setOpenModal(true)}
+                            >
+                                Back this project
+                            </button>
                             <button className='button-bookmark'>
                                 <img src={iconBookMark} alt="bookmark-icon"/>      
                             <p>Bookmark</p>
@@ -107,6 +116,11 @@ const Home:React.FC = () => {
                     </AboutProjectInfo>
                 </section>
             </Content>
+
+            <ModalBackThisProject 
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+            />
         </Container>
     )
 }
