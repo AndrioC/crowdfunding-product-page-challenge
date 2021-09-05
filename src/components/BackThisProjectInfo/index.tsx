@@ -8,10 +8,13 @@ import {
     BoxWrapperSelect,
 } from './styles'
 
+import ModalThanks from '../../components/ModalThanks'
 
 const BackThisProjectInfo: React.FC = () => {
 
     const [idChange, setIdChange] = useState(0);
+
+    const [openModalThanks, setOpenModalThanks] = useState(false);
 
     return (
         <>
@@ -50,11 +53,15 @@ const BackThisProjectInfo: React.FC = () => {
                                     <p>$</p>
                                     <input type="number" max="99" name="value" id="value" />
                                 </div>
-                                <button type="button">Continue</button>
+                                <button type="button" onClick={() => setOpenModalThanks(true)}>Continue</button>
                             </div>
                         </div>
                     </div>
                 </BoxWrapper>
+                <ModalThanks 
+                    openModalThanks={openModalThanks}
+                    setOpenModalThanks={setOpenModalThanks}    
+                />
             </BoxInfo>  
         ))}
         </>        

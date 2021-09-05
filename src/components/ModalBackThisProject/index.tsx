@@ -8,23 +8,12 @@ import {
 
 import BackThisProjectInfo from '../BackThisProjectInfo'
 
+import './modal-back-this-project.css'
+
 interface Props{
     openModal: boolean;
     setOpenModal(e: boolean): void;
 }
-
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        width: 730,
-        height: 906,
-    },
-  };
 
 const ModalBackThisProject: React.FC<Props> = ({ openModal, setOpenModal }) => {
 
@@ -33,8 +22,8 @@ const ModalBackThisProject: React.FC<Props> = ({ openModal, setOpenModal }) => {
             <Modal
                 isOpen={openModal}
                 onRequestClose={() => setOpenModal(false)}
-                contentLabel="Example Modal"
-                style={customStyles}
+                className="ModalBackProject"
+                overlayClassName="OverlayBackProject"
             >
                 <Header>
                     <div className="header-title">

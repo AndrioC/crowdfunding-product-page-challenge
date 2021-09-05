@@ -2,8 +2,6 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
 `;
 
 export const Header = styled.div`
@@ -11,6 +9,7 @@ export const Header = styled.div`
     align-items: center;
     justify-content: space-between;
     padding-left: 24px;
+    margin-top: 60px;
 
     .header-title{
         font-size: 15px;
@@ -29,8 +28,8 @@ export const Header = styled.div`
     }
 
     .header-close-button{
-        margin-top: -45px;
-        margin-left: 45px;
+        margin-top: -120px;
+        margin-right: 21px;
         cursor: pointer;
         :hover{
             opacity: 0.7;
