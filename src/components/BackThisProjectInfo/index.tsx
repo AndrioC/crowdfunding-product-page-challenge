@@ -25,8 +25,6 @@ const BackThisProjectInfo: React.FC = () => {
                             </div>
                         </button>
                     </BoxWrapperSelect>
-                    <div className="box-wrapper-select">
-                    </div>
 
                     <div className="box-wrapper-info">
                         <div className="box-wrapper-title">
@@ -42,6 +40,18 @@ const BackThisProjectInfo: React.FC = () => {
                             <p>
                                 {project.description}
                             </p>
+                        </div>
+                        <div className="box-wrapper-enter-pledge">
+                            <div className="box-wrapper-enter-pledge-title">
+                                <p>Enter your pledge</p>
+                            </div>
+                            <div className="box-wrapper-enter-pledge-button">
+                                <div className="box-wrapper-enter-pledge-button-input-pledge">
+                                    <p>$</p>
+                                    <input type="number" max="99" name="value" id="value" />
+                                </div>
+                                <button type="button">Continue</button>
+                            </div>
                         </div>
                     </div>
                 </BoxWrapper>

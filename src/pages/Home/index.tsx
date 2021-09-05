@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Header from '../../components/Header'
 import { 
     Container,
@@ -34,6 +34,14 @@ const Home:React.FC = () => {
     useMemo(() => {
         setFeatures(featuresData)
     }, [])
+
+    useEffect(() => {
+        if (openModal){
+            document.body.style.overflow = 'hidden';    
+        } else {
+            document.body.style.overflow = 'unset';      
+        }
+    }, [openModal])
 
     function renderFeatures(){
         return (
