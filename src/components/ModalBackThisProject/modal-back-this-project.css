@@ -9,7 +9,7 @@
     width: 730px;
     height: 1024px;
     opacity: 1;
-    border-radius: 9px;
+    border-radius: 9px;    
   }
 
 .OverlayBackProject {
@@ -19,4 +19,11 @@
     right: 0;
     bottom: 0;
     background-color: rgba(54, 52, 52, 0.274);
+}
+
+@media (max-width: 900px){
+  .ModalBackProject {
+    width: 333px;
+    height: 1493px;
+  } 
 }

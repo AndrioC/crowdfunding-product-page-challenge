@@ -1,5 +1,6 @@
 import React from 'react'
 import DesktopMenu from '../DesktopMenu'
+import MobileMenu from '../MobileMenu'
 import { 
     Container,
     Content
@@ -12,8 +13,13 @@ const Header:React.FC = () => {
     return (
         <Container>
             <Content>
-                <img src={logoImg} alt="logo"/> 
-                <DesktopMenu />
+                <img src={logoImg} alt="logo"/>
+                <div className="mobile-menu">
+                    <MobileMenu />
+                </div>
+                <div className="desktop-menu">
+                    <DesktopMenu />
+                </div>
             </Content>
         </Container>
     )

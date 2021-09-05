@@ -10,6 +10,10 @@ export const Container = styled.div`
     margin: 15px auto;
     background: var(--grey-10);
     border-radius: 10px;
+
+    @media(max-width: 900px){
+        width: 279px;
+    }
     
 `;
 

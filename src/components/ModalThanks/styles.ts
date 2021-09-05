@@ -55,4 +55,23 @@ export const Wrapper = styled.div`
         }
     }
 
+    @media(max-width: 900px){        
+        margin-top: 30px;    
+
+        .text-thanks-support{            
+            margin-top: 15px;
+            h1 {
+                font-size: 18px;
+            }
+
+            p{
+                font-size: 15px;
+            }
+
+            button {
+                margin-top: 21px;
+            }
+        }
+    }
+
 `;

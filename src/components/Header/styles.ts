@@ -14,4 +14,22 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 48px 166px;
+    .mobile-menu{
+        display: none;
+    }
+
+    .desktop-menu{
+        display: block;
+    }
+
+    @media(max-width: 900px){
+        .mobile-menu{
+            display: block;
+        }
+
+        .desktop-menu{
+            display: none;
+        }
+    }
+
 `;

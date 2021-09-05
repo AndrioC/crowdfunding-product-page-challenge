@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 
     section {
@@ -49,6 +50,7 @@ export const MasterCraftContent = styled.div`
 
         p {
             margin-top: 15px;
+            color: var(--grey-100);
         }
     }
 
@@ -107,6 +109,30 @@ export const MasterCraftContent = styled.div`
         }
     }
 
+    @media(max-width: 900px){
+        width: 333px;
+        height: 285px;
+
+        .mastercraft-info{
+            font-size: 15px;
+            padding: 0 12px 0 12px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .mastercraft-buttons{
+            display: flex;
+            .button-bookmark{
+                width: 60px;
+                height: 60px;
+                margin-left: 24px;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+
 `;
 
 export const ContributionInfo = styled.div`
@@ -149,14 +175,64 @@ export const ContributionInfo = styled.div`
 
             & + div {
                 margin-left: 90px;
-                &::after{
+                &::before{
                     content: '';
                     height: 63px;
                     width: 1%;
                     position: absolute;
-                    left: -50px;
+                    right: 120px;
                     background: var(--grey-40);  
                     opacity: .75;                        
+                }
+            }
+        }
+    }
+
+    @media(max-width: 900px){
+        width: 333px;
+        height: 412px;
+
+        .wrapper-info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 0px;
+
+            .wrapper-info-value{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15px;              
+                & + div:nth-child(2) {
+                    margin-left: 0px;
+                    margin-top: 21px;
+                    ::before{
+                        content: '';
+                        height: 1px;
+                        width: 81px;
+                        right: 3px;
+                        position: absolute;      
+                        background: var(--grey-40); 
+                        opacity: .75;
+                    }
+                }             
+                & + div:nth-child(3) {
+                    margin-left: 0px;
+                    margin-top: 21px;
+                    ::before{
+                        content: '';
+                        height: 1px;
+                        width: 81px;
+                        right: -12px;
+                        position: absolute;      
+                        background: var(--grey-40);  
+                        opacity: .75;
+                    }
+                }
+
+                h1 {
+                    margin-top: 21px;
                 }
             }
         }
@@ -191,6 +267,32 @@ export const AboutProjectInfo = styled.div`
             font-weight: normal;
             font-size: 15px;
             line-height: 30px;
+        }
+    }
+
+    @media(max-width: 900px){
+        width: 333px;
+        height: 1640px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .project-info{
+            margin-left: 0px; 
+            padding: 0 18px 0 18px;
+            margin-top: 20px;
+
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                color: var(--grey-100);
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 30px;
+            }
         }
     }
 `;

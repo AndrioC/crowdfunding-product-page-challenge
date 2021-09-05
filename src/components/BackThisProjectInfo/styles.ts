@@ -165,6 +165,64 @@ export const BoxWrapper = styled.div<BoxWrapperProps>`
             }
         }
     }
+
+    @media(max-width: 900px){
+        width: 279px;
+        height: ${props => (props.indexValue + 1) === props.idChange && props.qtdValue > 0 ? 423 : 250}px;
+
+        .box-wrapper-info{
+            .box-wrapper-title{
+                .box-wrapper-title-and-price{
+                    display: flex;
+                    flex-direction: column;
+                    span:nth-child(1) {
+                        font-size: 15px;
+                    }
+                    span:nth-child(2) {
+                        font-size: 12px;
+                    }
+                }
+
+                .box-wrapper-qtd{
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .box-wrapper-text{
+                margin-top: 12px;
+                margin-left: -42px;  
+                padding: 0 6px 0 6px;  
+            }
+
+            .box-wrapper-enter-pledge{
+                position: relative;
+                top: 20px;
+                display: flex;
+                flex-direction: column;
+                display: ${props => (props.indexValue + 1) === props.idChange && props.qtdValue > 0 ? "" : "none"};
+                ::before{
+                    content: '';
+                    height: 1px;
+                    width: 279px;
+                    position: absolute;
+                    background: #000;  
+                    opacity: .15; 
+                }
+
+                .box-wrapper-enter-pledge-title{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 15px;
+                }
+
+                .box-wrapper-enter-pledge-button{
+                    margin-left: -45px;
+                }
+            }
+        }
+    }
 `;
 
 export const BoxWrapperSelect = styled.div<Props>`

@@ -77,7 +77,7 @@ const Home:React.FC = () => {
                             </button>
                             <button className='button-bookmark'>
                                 <img src={iconBookMark} alt="bookmark-icon"/>      
-                            <p>Bookmark</p>
+                                <p>Bookmark</p>
                             </button>
                         </div>
                     </MasterCraftContent>

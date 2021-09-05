@@ -19,3 +19,10 @@
     bottom: 0;
     background-color: rgba(54, 52, 52, 0.274);
 }
+
+@media (max-width: 900px){
+  .ModalThanks {
+    width: 333px;
+    height: 384px;
+  } 
+}

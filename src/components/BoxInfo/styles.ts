@@ -14,6 +14,11 @@ export const Container = styled.div`
     background: var(--white);
     border-radius: 9px;
     margin-bottom: 24px;
+
+    @media(max-width: 900px){
+        width: 279px;
+        height: 372px;
+    }
 `;
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -88,6 +93,46 @@ export const Wrapper = styled.div<WrapperProps>`
                 background: ${props => props.qtdValue > 0 ? 'var(--green-50)' : 'var(--grey-100)'};
             }
         }
+    }
+
+    @media(max-width: 900px){
+        .info-header{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1 {
+                font-size: 18px;
+            }
+
+            p {   
+                line-height: 15px;
+                font-size: 15px;
+                color: var(--green-50);
+                font-weight: 500;
+                margin-top: 3px;
+            }
+        }
+
+        .info-text{
+            margin-right: 24px;
+            p {
+                line-height: 24px;
+                font-size: 14px;
+                width: 237px;
+            }
+        }
+
+        .info-button{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                margin-bottom: 3px;
+            }
+        }
+
     }
 
 `;

@@ -35,4 +35,27 @@ export const Header = styled.div`
             opacity: 0.7;
         }
     }
+
+    @media(max-width: 900px){
+        .header-title{
+            line-height: 27px;
+            font-style: normal;
+
+            h1 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 15px;
+                color: var(--grey-100);
+                font-style: normal;
+                width: 300px;
+            }
+        }
+
+        .header-close-button{
+            margin-left: -45px;
+        }
+    }
 `;
