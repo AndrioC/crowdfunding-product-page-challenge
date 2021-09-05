@@ -8,11 +8,6 @@ Hello, this project was created to complete the frontendmentor challenge. Feel f
 </h1>
 
 <h1>
-    <p>Desktop version - Active menu</p>
-    <img src="src/assets/images/project-completed-desktop-menu.png">
-</h1>
-
-<h1>
     <p>Mobile version</p>
     <img src="src/assets/images/project-completed-mobile.png">
 </h1>

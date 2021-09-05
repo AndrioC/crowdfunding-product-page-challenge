@@ -4,16 +4,18 @@ export const Container = styled.div`
     ul {
         display: flex;
         list-style: none;
+        margin-top: 12px;
 
         li {
+            position: absolute;
+            right: 18px;
             & + li {
-                margin-left: 33px;
+                margin-left: 36px;
             }    
 
             position: relative;
-
             color: var(--white);
-            font-size: 14px;
+            font-size: 24px;
             font-weight: 500;
 
             &:hover{
@@ -22,7 +24,7 @@ export const Container = styled.div`
                     content: '';
                     height: 2px;
                     width: 100%;
-                    top: 15px;
+                    top: 36px;
                     position: absolute;
                     left: 0;
                     background: var(--white);  

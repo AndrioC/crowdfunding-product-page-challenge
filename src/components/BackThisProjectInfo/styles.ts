@@ -13,7 +13,7 @@ interface Props{
 }
 
 export const BoxInfo = styled.div`
-    margin-top: 33px;
+    margin-bottom: 33px;
     padding-left: 24px;
     padding-right: 24px;
 `;
@@ -29,7 +29,7 @@ export const BoxWrapper = styled.div<BoxWrapperProps>`
     border-radius: 9px;
     pointer-events: ${props => props.qtdValue === 0 ? "none" : "all"};
     
-    opacity: ${props => props.qtdValue === 0 ? 0.3 : 1}; 
+    opacity: ${props => props.qtdValue === 0 ? 0.3 : 1};
 
     .box-wrapper-info{
         display: flex;
@@ -43,7 +43,6 @@ export const BoxWrapper = styled.div<BoxWrapperProps>`
             color: #3CB3AB;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 12px;
 
             .box-wrapper-title-and-price{
                 > span {

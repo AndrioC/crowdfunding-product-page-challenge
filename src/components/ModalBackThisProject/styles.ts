@@ -24,6 +24,7 @@ export const Header = styled.div`
             font-size: 15px;
             color: var(--grey-100);
             font-style: normal;
+            margin-bottom: 30px;
         }
     }
 
@@ -37,6 +38,7 @@ export const Header = styled.div`
     }
 
     @media(max-width: 900px){
+        margin-top: 30px;
         .header-title{
             line-height: 27px;
             font-style: normal;

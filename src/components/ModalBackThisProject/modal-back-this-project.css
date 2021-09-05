@@ -7,9 +7,11 @@
     transform: translate(-50%, -50%);
     background-color: #fff;
     width: 730px;
-    height: 1024px;
+    height: 930px;
     opacity: 1;
-    border-radius: 9px;    
+    border-radius: 9px;
+    
+    overflow-y: auto;
   }
 
 .OverlayBackProject {
@@ -24,6 +26,9 @@
 @media (max-width: 900px){
   .ModalBackProject {
     width: 333px;
-    height: 1493px;
+    height: 900px;
+    top: 50%;
+    
+    overflow-y: auto;
   } 
 }
