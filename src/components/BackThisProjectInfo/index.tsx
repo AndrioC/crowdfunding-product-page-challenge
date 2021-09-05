@@ -17,8 +17,8 @@ const BackThisProjectInfo: React.FC = () => {
         <>
         {backthisproject.map((project, index) => (
             <BoxInfo>
-                <BoxWrapper qtdValue={project.qtd ? project.qtd : 0}>
-                    <BoxWrapperSelect idChange={idChange} indexValue={index}  onClick={() => setIdChange(project.id)}>
+                <BoxWrapper qtdValue={project.qtd ? project.qtd : 0} idChange={idChange} indexValue={index}>
+                    <BoxWrapperSelect idChange={idChange} indexValue={index} onClick={() => setIdChange(project.id)}>
                         <button type="button">
                             <div>
                                 <div></div>
@@ -32,7 +32,7 @@ const BackThisProjectInfo: React.FC = () => {
                         <div className="box-wrapper-title">
                             <div className="box-wrapper-title-and-price">
                                 <span>{project.title}</span>
-                                {project.price ? <span>Pledge ${project.price} or more</span> : ""}                            
+                                {project.price ? <span style={{color: "#3CB3AB"}}>Pledge ${project.price} or more</span> : ""}                            
                             </div>
                             <div className="box-wrapper-qtd">
                                 {project.qtd && project.qtd >= 0? <p>{project.qtd} <span>left</span></p> : ""}
