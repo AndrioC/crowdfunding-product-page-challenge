@@ -1,4 +1,4 @@
-# Blogr Landing Page - Challenge
+# Crowdfunding Product Page - Challenge
 
 Hello, this project was created to complete the frontendmentor challenge. Feel free to use it as your guide. Below I'll show you how you can use it on your PC. But first, take a look at the images from the project.
 
